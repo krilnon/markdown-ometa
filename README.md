@@ -1,7 +1,7 @@
 markdown-ometa
 ==============
 
-A Markdown processor in OMeta
+A Markdown processor in OMeta.  This fork focuses on making an npm module out of the original editor demonstration.
 
 ## Contributors
 
@@ -10,6 +10,8 @@ Josh Marinacci (original author)
 Page @Page-
 
 Felix Breuer
+
+krilnon (this fork)
 
 ## See also
 
