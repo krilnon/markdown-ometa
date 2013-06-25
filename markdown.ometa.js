@@ -7,14 +7,13 @@ ometa Markdown_ {
 	h3 = "###" ' ' toEOL:t -> tag("h3",t),
 	
 	//paragraph
-  paraend = '\n' ' '* '\n',
+	paraend = '\n' ' '* '\n',
 	para =
 		(	strong
 		|	em
 		|	(~paraend anything)
 		)+:t
 		-> tag("p", objectString(t)),
-      //	text = <(~seq('\n\n') anything)*>,
 	strong =
 		"**"
 		<(~seq('**') anything)*>:t
@@ -22,7 +21,7 @@ ometa Markdown_ {
 		-> tag("strong", t),
 	em =
 		( "*" <(~seq('*') anything)*>:t "*" 
-    	| "_" <(~seq('_') anything)*>:t "_") 
+		| "_" <(~seq('_') anything)*>:t "_") 
 		-> tag("em", t),
 
 	//blockquote
@@ -44,7 +43,7 @@ ometa Markdown_ {
 
 Markdown_._enableTokens = function() {
 	this.tokensEnabled = true;
-	OMeta._enableTokens.call(this, ['h1', 'h2', 'h3', 'strong', 'codeblock', 'expr', 'em','latex','latexdisplay']);
+	OMeta._enableTokens.call(this, ['h1', 'h2', 'h3', 'strong', 'codeblock', 'em']);
 }
 
 Markdown_
