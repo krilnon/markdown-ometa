@@ -13,7 +13,7 @@ ometa Markdown_ {
 		|	em
 		|	(~paraend anything)
 		)+:t
-		-> tag("p", objectString(t)),
+		-> tag("paragraph", objectString(t)),
 	strong =
 		"**"
 		<(~seq('**') anything)*>:t
@@ -22,7 +22,7 @@ ometa Markdown_ {
 	em =
 		( "*" <(~seq('*') anything)*>:t "*" 
 		| "_" <(~seq('_') anything)*>:t "_") 
-		-> tag("em", t),
+		-> tag("emphasis", t),
 
 	//blockquote
 	blockquote = "> " para:t -> tag("blockquote",t),
@@ -34,16 +34,16 @@ ometa Markdown_ {
 		cbdelim
 		<(~seq('```') anything)*>:t
 		cbdelim
-		-> tag("pre", esc(t)),
+		-> tag("literal", esc(t)),
 	
 	//pull it all together
 	line = spaces (h3|h2|h1|blockquote|codeblock|para):t spaces -> t,
 	Process = line*
-};
+}
 
 Markdown_._enableTokens = function() {
-	this.tokensEnabled = true;
-	OMeta._enableTokens.call(this, ['h1', 'h2', 'h3', 'strong', 'codeblock', 'em']);
+	this.tokensEnabled = true
+	OMeta._enableTokens.call(this, ['h1', 'h2', 'h3', 'strong', 'codeblock', 'em'])
 }
 
 Markdown_
