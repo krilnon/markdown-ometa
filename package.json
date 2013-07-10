@@ -1,21 +1,32 @@
 {
-  "name": "markdown-ometa",
-  "version": "0.1.0",
-  "description": "OMeta grammar for Markdown.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/krilnon/markdown-ometa.git"
-  },
-  "keywords": [
-    "markdown",
-    "ometa"
-  ],
-  "author": "krilnon",
-  "license": "MIT",
-  "readmeFilename": "README.md",
-  "gitHead": "675f7de5096c55e0eb97a4f082e2d97eb03c53a9"
+	"name": "markdown-ometa",
+	"version": "0.1.0",
+	"author": "krilnon <krilnon@reclipse.net>",
+	"description": "OMeta grammar for Markdown.",
+	"contributors": [
+		{ "name": "Josh Marinacci", "email": "joshua@marinacci.org" },
+		{ "name": "Felix Breuer", "email": "felix@fbreuer.de" },
+		{ "name": "Pagan Gazzard", "email": "pjgazzard@googlemail.com" }
+	],
+	"main": "index.js",
+	"scripts": {
+		"start": "node ./index.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"ometa-js": "1.0.4"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/krilnon/markdown-ometa.git"
+	},
+	"keywords": [
+		"markdown",
+		"OMeta"
+	],
+	"license": "MIT",
+	"engines": {
+		"node": ">=0.10"
+	},
+	"readmeFilename": "README.md"
 }
