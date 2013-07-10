@@ -1,6 +1,6 @@
 {
 	"name": "markdown-ometa",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"author": "krilnon <krilnon@reclipse.net>",
 	"description": "OMeta grammar for Markdown.",
 	"contributors": [
@@ -22,7 +22,7 @@
 	},
 	"keywords": [
 		"markdown",
-		"OMeta"
+		"ometa"
 	],
 	"license": "MIT",
 	"engines": {

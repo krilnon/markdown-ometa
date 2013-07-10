@@ -50,7 +50,7 @@ function parse(str, formats){
 	} catch(err){} finally {
 		overrideFormats = undefined
 	}
-	return result
+	return result.join('')
 }
 
 /*
