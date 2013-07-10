@@ -41,9 +41,4 @@ ometa Markdown_ {
 	Process = line*
 }
 
-Markdown_._enableTokens = function() {
-	this.tokensEnabled = true
-	OMeta._enableTokens.call(this, ['h1', 'h2', 'h3', 'strong', 'codeblock', 'em'])
-}
-
 Markdown_
